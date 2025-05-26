@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Propose Girlfriend - Cute Drawing</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ffd1ea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #d63384;
+      text-shadow: 1px 1px 2px #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+    .flower-animate {
+      animation: sway 2s infinite alternate ease-in-out;
+      transform-origin: bottom center;
+    }
+    @keyframes sway {
+      from { transform: rotate(-6deg);}
+      to { transform: rotate(6deg);}
+    }
+  </style>
+</head>
+<body>
+  <svg width="400" height="350" viewBox="0 0 400 350">
+    <!-- Pink background -->
+    <rect width="400" height="350" fill="#ffd1ea"/>
+
+    <!-- Girl 1: Feminine, long hair (left) -->
+    <!-- Hair -->
+    <ellipse cx="110" cy="140" rx="42" ry="60" fill="#ffc2d1"/>
+    <ellipse cx="110" cy="180" rx="32" ry="40" fill="#ffc2d1"/>
+    <!-- Face -->
+    <ellipse cx="110" cy="160" rx="26" ry="32" fill="#fffde4" stroke="#d48bbd" stroke-width="2"/>
+    <!-- Eyes -->
+    <ellipse cx="100" cy="165" rx="4" ry="6" fill="#834c69"/>
+    <ellipse cx="120" cy="165" rx="4" ry="6" fill="#834c69"/>
+    <!-- Smile -->
+    <path d="M102 180 Q110 188, 118 180" stroke="#834c69" stroke-width="2" fill="none"/>
+    <!-- Body -->
+    <rect x="95" y="192" width="30" height="50" rx="12" fill="#f7a8b8"/>
+    <!-- Arm -->
+    <rect x="80" y="205" width="14" height="8" rx="4" fill="#f7a8b8"/>
+    <!-- Hand (holding flower) -->
+    <ellipse cx="84" cy="209" rx="5" ry="3" fill="#fffde4"/>
+
+    <!-- Girl 2: Masculine, wolfcut hair (right) -->
+    <!-- Hair (wolfcut: messy, short on sides, longer on top) -->
+    <ellipse cx="290" cy="140" rx="32" ry="23" fill="#62616a"/>
+    <ellipse cx="290" cy="160" rx="28" ry="18" fill="#62616a"/>
+    <ellipse cx="275" cy="145" rx="10" ry="16" fill="#62616a"/>
+    <ellipse cx="305" cy="145" rx="10" ry="16" fill="#62616a"/>
+    <!-- Face -->
+    <ellipse cx="290" cy="160" rx="20" ry="25" fill="#fffde4" stroke="#8c6991" stroke-width="2"/>
+    <!-- Eyes -->
+    <ellipse cx="283" cy="165" rx="3" ry="5" fill="#5c436c"/>
+    <ellipse cx="297" cy="165" rx="3" ry="5" fill="#5c436c"/>
+    <!-- Smile -->
+    <path d="M285 177 Q290 183, 295 177" stroke="#5c436c" stroke-width="2" fill="none"/>
+    <!-- Body -->
+    <rect x="275" y="190" width="30" height="50" rx="12" fill="#f7b0c3"/>
+    <!-- Arm -->
+    <rect x="303" y="205" width="14" height="8" rx="4" fill="#f7b0c3"/>
+
+    <!-- Flower (held by girl 1) -->
+    <!-- Stem -->
+    <rect x="87" y="205" width="4" height="36" rx="2" fill="#a9e3a3" class="flower-animate"/>
+    <!-- Leaf -->
+    <ellipse cx="89" cy="222" rx="6" ry="2" fill="#a9e3a3" transform="rotate(-20 89 222)"/>
+    <!-- Petals -->
+    <g class="flower-animate">
+      <ellipse cx="89" cy="205" rx="8" ry="4" fill="#ff3e6c"/>
+      <ellipse cx="93" cy="200" rx="8" ry="4" fill="#ff6d96" transform="rotate(30 93 200)"/>
+      <ellipse cx="85" cy="200" rx="8" ry="4" fill="#ff3e6c" transform="rotate(-30 85 200)"/>
+      <ellipse cx="89" cy="196" rx="5" ry="3" fill="#ffa3b7"/>
+    </g>
+    <!-- Flower center -->
+    <ellipse cx="89" cy="203" rx="2.5" ry="2.5" fill="#fffde4"/>
+  </svg>
+  <div class="message">
+    Do you want to be my girlfriend? 💖
+  </div>
+  <script>
+    // Optional: Add sparkle on hover!
+    const svg = document.querySelector('svg');
+    svg.addEventListener('mouseenter', () => {
+      svg.style.filter = 'drop-shadow(0 0 12px #ff8ecf)';
+    });
+    svg.addEventListener('mouseleave', () => {
+      svg.style.filter = '';
+    });
+  </script>
+</body>
+</html>
